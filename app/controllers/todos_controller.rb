@@ -13,7 +13,7 @@ class TodosController < ApplicationController
 
   def create
 
-    @todo = Todo.new(whitelisted_todo_params)
+    @todo = Todo.new(whitelisted_params)
 
     if @todo.save
       flash[:success] = "New Todo Created!"
@@ -43,7 +43,7 @@ class TodosController < ApplicationController
 
     @todo = Todo.find(params[:id])
 
-    if @todo.update(whitelisted_todo_params)
+    if @todo.update(whitelisted_params)
       flash[:success] = "Todo updated!"
       redirect_to todos_path
     else
@@ -57,7 +57,7 @@ class TodosController < ApplicationController
 
     @todo = Todo.find(params[:id])
 
-    if @todo.update(whitelisted_complete_params)
+    if @todo.update(whitelisted_complete)
       flash[:success] = "Todo completed!"
       redirect_to todos_path
     else
@@ -67,9 +67,9 @@ class TodosController < ApplicationController
 
   end
 
-  def whitelisted_todo_params
+  def whitelisted_params
 
-    params.require(:todo).permit(:tast, :due_date, :completion_date)
+    params.require(:todo).permit(:task, :due_date, :completion_date)
 
   end
 
