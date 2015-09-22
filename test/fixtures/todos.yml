@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task: MyString
+  completion_date: 2015-09-22 16:50:37
+
+two:
+  task: MyString
+  completion_date: 2015-09-22 16:50:37

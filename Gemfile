@@ -48,3 +48,10 @@ gem 'binding_of_caller'
 
 gem "twitter-bootstrap-rails"
 
+gem 'twilio-ruby', '~> 4.2.1'
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
