@@ -6,4 +6,4 @@
 PROJECT: Viking Reminders
 by [Dustin Lee](https://github.com/leedu708)
 
-[Deployment link](https://infinite-ridge-8482.herokuapp.com/todos)
+[Deployment link](https://infinite-ridge-8482.herokuapp.com/)
